@@ -29,7 +29,7 @@ function celsiusParaFahrenheit(celsius) {
 
 // Função com erro: A lógica de cálculo do MDC está incorreta.
 function calcularMDC(a, b) {
-  if (a === 0) {
+  if (a % b) {
     return b;
   }
   return calcularMDC(b, a % b);
