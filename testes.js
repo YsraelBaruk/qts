@@ -24,6 +24,9 @@ QUnit.module('calcularFatorial', function() {
 QUnit.module('ehPalindromo', function() {
   QUnit.test('ehPalindromo', function(assert) {
     assert.ok(ehPalindromo("radar"), "'radar' é um palíndromo");
+    assert.ok(ehPalindromo("ana"), "'ana' é um palíndromo");
+    assert.ok(ehPalindromo("sus"), "'sus' é um palíndromo");
+    assert.ok(ehPalindromo("luzazul"), "'luzazul' é um palíndromo");
     assert.notOk(ehPalindromo("banana"), "'banana' não é um palíndromo");
   });
 });

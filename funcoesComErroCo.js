@@ -1,23 +1,11 @@
 // Função com erro: Altura e largura deveriam ser números, mas aqui não é feita nenhuma validação.
-const altura = 0;
-const largura = 0;
 function calcularAreaRetangulo(altura, largura) {
-  if(altura < 0 || altura > 0){
-    if(largura < 0 || largura > 0){
-      return parseToReal(altura * largura);
-    }
-    else{
-      return 'Largura não é um número';
-    }
-  }
-  else{
-    return 'Altura não é um número';
-  }
+  return parseFloat(altura * largura);
 }
 
 // Função com erro: A lógica de verificação de número par está invertida.
 function ehNumeroPar(numero) {
-  return numero % 2 !== 0;
+  return (numero % 2) == 0;
 }
 
 // Função com erro: A condição de parada para o cálculo do fatorial está incorreta.
@@ -31,12 +19,12 @@ function calcularFatorial(numero) {
 // Função com erro: A comparação entre a string original e a string invertida está incorreta.
 function ehPalindromo(str) {
   const reversedStr = str.split('').reverse().join('');
-  return str === reversedStr.toUpperCase();
+  return str === reversedStr;
 }
 
 // Função com erro: Fórmula de conversão Celsius para Fahrenheit está incorreta.
 function celsiusParaFahrenheit(celsius) {
-  return (celsius * 9/4) + 32;
+  return (celsius * 1.8) + 32;
 }
 
 // Função com erro: A lógica de cálculo do MDC está incorreta.
@@ -64,7 +52,7 @@ function fibonacci(indice) {
   if (indice <= 1) {
     return indice;
   }
-  return fibonacci(indice - 1) + fibonacci(indice - 1);
+  return fibonacci(indice - 1) + fibonacci(indice - 2);
 }
 
 // Função com erro: A lógica de verificação de número primo está incorreta.
